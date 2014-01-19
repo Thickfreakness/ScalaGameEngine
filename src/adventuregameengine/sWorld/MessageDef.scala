@@ -20,3 +20,5 @@ case class SeeInventory
 case class Inventory(items: Set[String])
 case class MoveObject(label: String, dest: (Int,Int,Int))
 case class AddObject(label: String, ref: ActorRef)
+case class WhoAreYou
+case class SendTo(label: String, dest: (Int,Int,Int))

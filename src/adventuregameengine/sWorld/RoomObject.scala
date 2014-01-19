@@ -24,5 +24,7 @@ class RoomObject(val label: String,
     case Combine(label) => for(s <- onCombine.keys ; if(s == label) ) onCombine(s).triggerEvent()
     case State(s) => state = s
     case GetState => sender ! State(state)
+    case GetSize => sender ! (sizeX,sizeY,sizeZ)
+    case WhoAreYou => sender ! label
   }
 }
